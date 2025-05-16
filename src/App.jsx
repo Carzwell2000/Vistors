@@ -51,17 +51,19 @@ const App = () => {
             RESEARCH INNOVATION & BUSINESS INCUBATION
           </p>
         </div>
-        <img src={icon} alt="icon" className="h-16 w-16 sm:h-20 sm:w-20" />
+        <img
+          src={icon}
+          alt="icon"
+          className="hidden md:block h-16 w-16 sm:h-20 sm:w-20"
+        />
       </div>
 
-      
       <div className="w-full max-w-xl mx-auto p-6 sm:p-8 bg-white shadow-xl rounded-2xl">
         <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
           Attendance Register for Visitors
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          
           <div>
             <label htmlFor="name" className="block text-gray-700 font-medium mb-1">
               Full Name(s)
@@ -77,7 +79,6 @@ const App = () => {
             />
           </div>
 
-          
           <div>
             <label htmlFor="date" className="block text-gray-700 font-medium mb-1">
               Date
@@ -92,7 +93,6 @@ const App = () => {
             />
           </div>
 
-        
           <div>
             <label htmlFor="department" className="block text-gray-700 font-medium mb-1">
               Department
@@ -108,7 +108,6 @@ const App = () => {
             />
           </div>
 
-          {/* Email */}
           <div>
             <label htmlFor="email" className="block text-gray-700 font-medium mb-1">
               Email Address
@@ -124,7 +123,6 @@ const App = () => {
             />
           </div>
 
-          
           <div>
             <label htmlFor="phone" className="block text-gray-700 font-medium mb-1">
               Phone Number
@@ -140,7 +138,6 @@ const App = () => {
             />
           </div>
 
-          
           <div>
             <label htmlFor="purpose" className="block text-gray-700 font-medium mb-1">
               Purpose of Visit
@@ -155,7 +152,6 @@ const App = () => {
             />
           </div>
 
-        
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 active:bg-green-600 transition duration-200"
