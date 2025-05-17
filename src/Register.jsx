@@ -59,7 +59,7 @@ const App = () => {
 
       <div className="w-full max-w-xl mx-auto p-6 sm:p-8 bg-white shadow-xl rounded-2xl">
         <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
-          Attendance Register for Visitors
+          Visitor's Register
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
