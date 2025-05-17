@@ -153,7 +153,7 @@ const Feedback = () => {
 
           {/* 5. Rating */}
           <div>
-            <label htmlFor="rating" className="block text-gray-700 font-medium mb-1">Rate your experience (1 = Poor, 5 = Excellent)</label>
+            <label htmlFor="rating" className="block text-gray-700 font-medium mb-1">Rate us</label>
             <select name="rating" value={formData.rating} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
               <option value="">Select</option>
               {[1, 2, 3, 4, 5].map((val) => (
@@ -180,7 +180,7 @@ const Feedback = () => {
 
           {/* 6. Suggestions */}
           <div>
-            <label htmlFor="improvements" className="block text-gray-700 font-medium mb-1">What can we improve?</label>
+            <label htmlFor="improvements" className="block text-gray-700 font-medium mb-1">In what ways can we improve our services?</label>
             <textarea name="improvements" value={formData.improvements} onChange={handleChange} placeholder="Your suggestions..." className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[60px]" />
           </div>
 
