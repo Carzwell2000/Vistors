@@ -129,7 +129,7 @@ const Feedback = () => {
 
           {/* 4. Assistance */}
           <div>
-            <label htmlFor="neededAssistance" className="block text-gray-700 font-medium mb-1">Did you get assisted well with the staff in whatever way you want?</label>
+            <label htmlFor="neededAssistance" className="block text-gray-700 font-medium mb-1">Were you satisfied with the assistance you received?</label>
             <select name="neededAssistance" value={formData.neededAssistance} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
               <option value="">Select</option>
               <option value="Yes">Yes</option>
