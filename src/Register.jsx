@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <section className="bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500 min-h-screen px-4 sm:px-6 md:px-10 py-6">
-      <div className="border-b-2 border-white mb-6" />
+      
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-center md:text-left mb-8">
         <img src={icon} alt="icon" className="h-16 w-16 sm:h-20 sm:w-20" />
         <div>
