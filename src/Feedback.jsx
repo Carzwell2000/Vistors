@@ -8,19 +8,19 @@ const Feedback = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    comment: "",
-    improvements: "",
-    recommendations: "",
+    visitedBefore: "",
+    relevant: "",
     expectationsMet: "",
     ifNotWhy: "",
-    rating: "",
-    relevant: "",
-    visitedBefore: "",
-    WouldYouRecommendHub: "",
-    Why: "",
     gotSomething: "",
     neededAssistance: "",
     satisfactionWithSupport: "",
+    rating: "",
+    WouldYouRecommendHub: "",
+    Why: "",
+    improvements: "",
+    recommendations: "",
+    comment: "",
   });
 
   const handleChange = (event) => {
@@ -35,19 +35,19 @@ const Feedback = () => {
       setFormData({
         name: "",
         email: "",
-        comment: "",
-        improvements: "",
-        recommendations: "",
+        visitedBefore: "",
+        relevant: "",
         expectationsMet: "",
         ifNotWhy: "",
-        rating: "",
-        relevant: "",
-        visitedBefore: "",
-        WouldYouRecommendHub: "",
-        Why: "",
         gotSomething: "",
         neededAssistance: "",
         satisfactionWithSupport: "",
+        rating: "",
+        WouldYouRecommendHub: "",
+        Why: "",
+        improvements: "",
+        recommendations: "",
+        comment: "",
       });
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -82,74 +82,40 @@ const Feedback = () => {
         </h2>
 
         <form onSubmit={handleSubmit} className="space-y-5">
-          {/* name and email inputs */}
+          {/* 1. Basic Info */}
           <div>
-            <label htmlFor="name" className="block text-gray-700 font-medium mb-1">
-              Full Name(s)
-            </label>
-            <input
-              type="text"
-              name="name"
-              placeholder="Enter your name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+            <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Full Name(s)</label>
+            <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Enter your name" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-gray-700 font-medium mb-1">
-              Email Address
-            </label>
-            <input
-              type="email"
-              name="email"
-              placeholder="Enter email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            />
+            <label htmlFor="email" className="block text-gray-700 font-medium mb-1">Email Address</label>
+            <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
           </div>
 
-          {/* rest of form inputs */}
+          {/* 2. Visit Context */}
           <div>
-            <label htmlFor="improvements" className="block text-gray-700 font-medium mb-1">
-              Improvements
-            </label>
-            <textarea
-              name="improvements"
-              placeholder="What can we improve?"
-              value={formData.improvements}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none min-h-[60px]"
-            />
+            <label htmlFor="visitedBefore" className="block text-gray-700 font-medium mb-1">Have you visited the hub before?</label>
+            <select name="visitedBefore" value={formData.visitedBefore} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
           </div>
 
           <div>
-            <label htmlFor="recommendations" className="block text-gray-700 font-medium mb-1">
-              Recommendations
-            </label>
-            <textarea
-              name="recommendations"
-              placeholder="Any recommendations?"
-              value={formData.recommendations}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none min-h-[60px]"
-            />
+            <label htmlFor="relevant" className="block text-gray-700 font-medium mb-1">Was the visit relevant to your interests?</label>
+            <select name="relevant" value={formData.relevant} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
           </div>
 
+          {/* 3. Expectations & Outcomes */}
           <div>
-            <label htmlFor="expectationsMet" className="block text-gray-700 font-medium mb-1">
-              Did your visit meet your expectations?
-            </label>
-            <select
-              name="expectationsMet"
-              value={formData.expectationsMet}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
+            <label htmlFor="expectationsMet" className="block text-gray-700 font-medium mb-1">Did your visit meet your expectations?</label>
+            <select name="expectationsMet" value={formData.expectationsMet} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
               <option value="">Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -158,125 +124,24 @@ const Feedback = () => {
 
           {formData.expectationsMet === "No" && (
             <div>
-              <label htmlFor="ifNotWhy" className="block text-gray-700 font-medium mb-1">
-                If not, why?
-              </label>
-              <textarea
-                name="ifNotWhy"
-                placeholder="Please explain"
-                value={formData.ifNotWhy}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none min-h-[60px]"
-              />
+              <label htmlFor="ifNotWhy" className="block text-gray-700 font-medium mb-1">If not, why?</label>
+              <textarea name="ifNotWhy" value={formData.ifNotWhy} onChange={handleChange} placeholder="Please explain" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[60px]" />
             </div>
           )}
 
           <div>
-            <label htmlFor="rating" className="block text-gray-700 font-medium mb-1">
-              Rate Us (1 - Poor to 5 - Excellent)
-            </label>
-            <select
-              name="rating"
-              value={formData.rating}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
-              <option value="">Select</option>
-              {[1, 2, 3, 4, 5].map((val) => (
-                <option key={val} value={val}>{val}</option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="relevant" className="block text-gray-700 font-medium mb-1">
-              Was the visit relevant to your interests?
-            </label>
-            <select
-              name="relevant"
-              value={formData.relevant}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
+            <label htmlFor="gotSomething" className="block text-gray-700 font-medium mb-1">Did you get something from the Innovation Hub?</label>
+            <select name="gotSomething" value={formData.gotSomething} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
               <option value="">Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
             </select>
           </div>
 
+          {/* 4. Staff Support */}
           <div>
-            <label htmlFor="visitedBefore" className="block text-gray-700 font-medium mb-1">
-              Have you visited the hub before?
-            </label>
-            <select
-              name="visitedBefore"
-              value={formData.visitedBefore}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
-              <option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="WouldYouRecommendHub" className="block text-gray-700 font-medium mb-1">
-              Would you recommend the Innovation Hub to others?
-            </label>
-            <select
-              name="WouldYouRecommendHub"
-              value={formData.WouldYouRecommendHub}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
-              <option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-
-          {formData.WouldYouRecommendHub && (
-            <div>
-              <label htmlFor="Why" className="block text-gray-700 font-medium mb-1">
-                Why?
-              </label>
-              <textarea
-                name="Why"
-                placeholder="Please explain why"
-                value={formData.Why}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none min-h-[60px]"
-              />
-            </div>
-          )}
-
-          <div>
-            <label htmlFor="gotSomething" className="block text-gray-700 font-medium mb-1">
-              Did you get something from the Innovation Hub?
-            </label>
-            <select
-              name="gotSomething"
-              value={formData.gotSomething}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
-              <option value="">Select</option>
-              <option value="Yes">Yes</option>
-              <option value="No">No</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="neededAssistance" className="block text-gray-700 font-medium mb-1">
-              Did you have any questions or require assistance from staff?
-            </label>
-            <select
-              name="neededAssistance"
-              value={formData.neededAssistance}
-              onChange={handleChange}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-            >
+            <label htmlFor="neededAssistance" className="block text-gray-700 font-medium mb-1">Did you have any questions or require assistance from staff?</label>
+            <select name="neededAssistance" value={formData.neededAssistance} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
               <option value="">Select</option>
               <option value="Yes">Yes</option>
               <option value="No">No</option>
@@ -285,15 +150,8 @@ const Feedback = () => {
 
           {formData.neededAssistance === "Yes" && (
             <div>
-              <label htmlFor="satisfactionWithSupport" className="block text-gray-700 font-medium mb-1">
-                How satisfied were you with the support you received?
-              </label>
-              <select
-                name="satisfactionWithSupport"
-                value={formData.satisfactionWithSupport}
-                onChange={handleChange}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-              >
+              <label htmlFor="satisfactionWithSupport" className="block text-gray-700 font-medium mb-1">How satisfied were you with the support you received?</label>
+              <select name="satisfactionWithSupport" value={formData.satisfactionWithSupport} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
                 <option value="">Select</option>
                 <option value="Very Satisfied">Very Satisfied</option>
                 <option value="Satisfied">Satisfied</option>
@@ -304,33 +162,56 @@ const Feedback = () => {
             </div>
           )}
 
+          {/* 5. Overall Satisfaction & Recommendation */}
           <div>
-            <label htmlFor="comment" className="block text-gray-700 font-medium mb-1">
-              Any Comment
-            </label>
-            <textarea
-              name="comment"
-              placeholder="Leave a comment..."
-              value={formData.comment}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none resize-none min-h-[80px]"
-            />
+            <label htmlFor="rating" className="block text-gray-700 font-medium mb-1">Rate Us (1 - Poor to 5 - Excellent)</label>
+            <select name="rating" value={formData.rating} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+              <option value="">Select</option>
+              {[1, 2, 3, 4, 5].map((val) => (
+                <option key={val} value={val}>{val}</option>
+              ))}
+            </select>
           </div>
 
-          <button
-            type="submit"
-            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 active:bg-green-600 transition duration-200"
-          >
+          <div>
+            <label htmlFor="WouldYouRecommendHub" className="block text-gray-700 font-medium mb-1">Would you recommend the Innovation Hub to others?</label>
+            <select name="WouldYouRecommendHub" value={formData.WouldYouRecommendHub} onChange={handleChange} className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500">
+              <option value="">Select</option>
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+
+          {formData.WouldYouRecommendHub && (
+            <div>
+              <label htmlFor="Why" className="block text-gray-700 font-medium mb-1">Why?</label>
+              <textarea name="Why" value={formData.Why} onChange={handleChange} placeholder="Please explain why" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[60px]" />
+            </div>
+          )}
+
+          {/* 6. Feedback & Comments */}
+          <div>
+            <label htmlFor="improvements" className="block text-gray-700 font-medium mb-1">What can we improve?</label>
+            <textarea name="improvements" value={formData.improvements} onChange={handleChange} placeholder="Your suggestions for improvement..." className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[60px]" />
+          </div>
+
+          <div>
+            <label htmlFor="recommendations" className="block text-gray-700 font-medium mb-1">Any recommendations?</label>
+            <textarea name="recommendations" value={formData.recommendations} onChange={handleChange} placeholder="Any additional recommendations..." className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[60px]" />
+          </div>
+
+          <div>
+            <label htmlFor="comment" className="block text-gray-700 font-medium mb-1">Any Comment</label>
+            <textarea name="comment" value={formData.comment} onChange={handleChange} placeholder="Leave a comment..." required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[80px]" />
+          </div>
+
+          <button type="submit" className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 active:bg-green-600 transition duration-200">
             Submit
           </button>
         </form>
 
         <div className="mt-6 text-center">
-          <Link
-            to="/"
-            className="px-4 py-4 inline-block text-blue-600 font-semibold hover:underline bg-green-200"
-          >
+          <Link to="/" className="px-4 py-4 inline-block text-blue-600 font-semibold hover:underline bg-green-200">
             Register
           </Link>
         </div>
@@ -340,3 +221,4 @@ const Feedback = () => {
 };
 
 export default Feedback;
+
