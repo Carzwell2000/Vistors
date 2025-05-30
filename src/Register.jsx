@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { icon } from "./assets/icons";
 import { db } from "./config/firebase";
 import { collection, addDoc } from "firebase/firestore";
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ const App = () => {
 
   return (
     <section className="bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500 min-h-screen px-4 sm:px-6 md:px-10 py-6">
-      
+
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-center md:text-left mb-8">
         <img src={icon} alt="icon" className="h-16 w-16 sm:h-20 sm:w-20" />
         <div>
@@ -151,7 +151,7 @@ const App = () => {
             />
           </div>
 
-          
+
           <button
             type="submit"
             className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 active:bg-green-600 transition duration-200"
@@ -159,10 +159,10 @@ const App = () => {
             Submit
           </button>
 
-          
+
           <div className="text-center mt-4">
             <Link
-              to="/feedback"
+              to="/madomasi"
               className="inline-block bg-green-200 hover:bg-blue-100 text-blue-600 font-semibold py-2 px-4 rounded transition duration-200"
             >
               Give Feedback
