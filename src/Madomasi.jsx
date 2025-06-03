@@ -54,7 +54,7 @@ const Madomasi = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500 min-h-screen px-4 sm:px-6 md:px-10 py-6">
+    <section className="bg-blue-500 min-h-screen px-4 sm:px-6 md:px-10 py-6">
       {/* Removed the horizontal divider */}
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-center md:text-left mb-8">
