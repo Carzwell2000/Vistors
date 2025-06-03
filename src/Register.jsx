@@ -38,7 +38,7 @@ const App = () => {
   };
 
   return (
-    <section className="bg-blue-500">
+    <section className="bg-blue-500 px-4 sm:px-6 md:px-10 py-6 ">
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-center md:text-left mb-8">
         <img src={icon} alt="icon" className="h-16 w-16 sm:h-20 sm:w-20" />
