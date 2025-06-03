@@ -75,7 +75,7 @@ const Madomasi = () => {
       </div>
 
       <div className="w-full max-w-xl mx-auto p-6 sm:p-8 bg-white shadow-xl rounded-2xl">
-        <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
+        <h2 className="text-2xl font-bold text-center text-black mb-6">
           FEEDBACK
         </h2>
 
@@ -194,13 +194,13 @@ const Madomasi = () => {
             <textarea name="comment" value={formData.comment} onChange={handleChange} placeholder="Leave a comment..." required className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 resize-none min-h-[80px]" />
           </div>
 
-          <button type="submit" className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 active:bg-green-600 transition duration-200">
+          <button type="submit" className="w-full py-3 bg-green-600 text-white font-bold rounded-lg transition duration-200">
             Submit
           </button>
         </form>
 
         <div className="mt-6 text-center">
-          <Link to="/" className="px-4 py-4 inline-block text-blue-600 font-semibold hover:underline bg-green-200">
+          <Link to="/" className=" w-full px-4 py-4 inline-block text-blue-600 font-semibold hover:underline ">
             Register
           </Link>
         </div>

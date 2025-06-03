@@ -38,7 +38,7 @@ const App = () => {
   };
 
   return (
-    <section className="bg-gradient-to-b from-blue-300 via-blue-400 to-blue-500 min-h-screen px-4 sm:px-6 md:px-10 py-6">
+    <section className="bg-blue-500">
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-10 text-center md:text-left mb-8">
         <img src={icon} alt="icon" className="h-16 w-16 sm:h-20 sm:w-20" />
@@ -58,7 +58,7 @@ const App = () => {
       </div>
 
       <div className="w-full max-w-xl mx-auto p-6 sm:p-8 bg-white shadow-xl rounded-2xl">
-        <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">
+        <h2 className="text-2xl font-bold text-center text-black mb-6">
           Visitor 's Register
         </h2>
 
@@ -154,7 +154,7 @@ const App = () => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 active:bg-green-600 transition duration-200"
+            className="w-full py-3 bg-green-600 text-white font-bold rounded-lg transition duration-200"
           >
             Submit
           </button>
@@ -163,7 +163,7 @@ const App = () => {
           <div className="text-center mt-4">
             <Link
               to="/madomasi"
-              className="inline-block bg-green-200 hover:bg-blue-100 text-blue-600 font-semibold py-2 px-4 rounded transition duration-200"
+              className="w-full inline-block text-blue-600 font-semibold py-2 px-4 rounded transition duration-200"
             >
               Give Feedback
             </Link>
