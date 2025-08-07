@@ -83,12 +83,12 @@ const Madomasi = () => {
           {/* 1. Basic Info */}
           <div>
             <label htmlFor="name" className="block text-gray-700 font-medium mb-1">Full Name</label>
-            <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="Enter your full name" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
+            <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="optional" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
           </div>
 
           <div>
             <label htmlFor="email" className="block text-gray-700 font-medium mb-1">Email Address</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="Enter your email" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
+            <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="optional" className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500" />
           </div>
 
           {/* 2. Visit Info */}

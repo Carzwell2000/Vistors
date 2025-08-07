@@ -162,7 +162,7 @@ const App = () => {
 
           <div className="text-center mt-4">
             <Link
-              to="/madomasi"
+              to="/feedback"
               className="w-full inline-block text-blue-600 font-semibold py-2 px-4 rounded transition duration-200"
             >
               Give Feedback
